@@ -45,16 +45,15 @@
             let channelsCounter = 0;
             channelsLinks.forEach((channel) => {
                 console.log(channel);
-                  let button = document.createElement('BUTTON');
-                 let text = document.createTextNode(channelsNames[channelsCounter]);
-                 button.onclick = function () {
+                let button = document.createElement('BUTTON');
+                let text = document.createTextNode(channelsNames[channelsCounter]);
+                button.onclick = function () {
                     setSrc(channel);
-                 }
-                 button.setAttribute('class', 'display-block');
-            button.appendChild(text);
-             document.getElementById('channels-buttons-container').appendChild(button);
-             channelsCounter++;
-                
+                }
+                button.setAttribute('class', 'display-block');
+                button.appendChild(text);
+                document.getElementById('channels-buttons-container').appendChild(button);
+                channelsCounter++;
             });
   
     </script>
