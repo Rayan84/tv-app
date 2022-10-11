@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+}
+
+.display-flex {
+    display: flex;
+}
+.display-block {
+    display: block;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.border-none {
+    border: none;
+}
+
+.width-100-percent {
+    width: 100%;
+}
+
+.groups-container {
+    width: 10%;
+}
+
+#iframe {
+    width: 99vw;
+    height: 99vh;
+}
+
+#channels-buttons-container {
+    top: 0%;
+    left: 10%;
+}
