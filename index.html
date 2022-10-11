@@ -16,7 +16,7 @@
           <button class="display-block width-100-percent">Dutch</button>
           <button class="display-block width-100-percent">Iraqi</button>
       </div>
-      <div id="channels-buttons-container" class="position-absolute">
+      <div id="channels-buttons-container" class="position-absolute width-100-percent">
 
       </div>
     </div>
@@ -29,6 +29,8 @@
 
         const channelsLinks = [
             // Arabic Group
+            // Alarabiya
+            "https://www.youtube.com/embed/UDNO9R7C4oQ",
             // Asharq
             "https://www.youtube.com/embed/3-w4NKvDp9A",
             // BBC
@@ -37,7 +39,7 @@
            "https://www.youtube.com/embed/IT2pWSWneTc"
         ];
 
-        const channelsNames = ['Asharq', 'BBC', 'Sky News Arabic'];
+        const channelsNames = ['Alarabiya', 'Asharq', 'BBC', 'Sky News Arabic'];
         const setSrc = (link) => {
             console.log('Changing the channel...');
             document.getElementById('iframe').setAttribute('src', link);
