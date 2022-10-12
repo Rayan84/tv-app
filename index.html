@@ -12,7 +12,7 @@
     <div class="position-relative">
       <div class="position-absolute groups-container">
           <button class="display-block width-100-percent">English</button>
-          <button class="display-block width-100-percent">Arabic</button>
+          <button class="display-block width-100-percent" onmouseover= show(0) onmouseout="hide(0)">Arabic</button>
           <button class="display-block width-100-percent">Dutch</button>
           <button class="display-block width-100-percent">Iraqi</button>
       </div>
@@ -26,7 +26,6 @@
     </div>
 
     <script>
-
         const channelsLinks = [
             // Arabic Group
             // Alarabiya
@@ -71,6 +70,17 @@
                 document.getElementById('channels-buttons-container').appendChild(button);
                 channelsCounter++;
             });
+
+            const show = (item) => {
+                console.log('show..');
+                document.getElementById('channels-buttons-container').style.display = 'block';
+            }
+
+            const hide = (item) => {
+                console.log('hide');
+                document.getElementById('channels-buttons-container').style.display = 'none';
+
+            }
   
     </script>
   </body>

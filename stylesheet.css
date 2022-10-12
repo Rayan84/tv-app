@@ -52,4 +52,5 @@ button:hover {
     top: 0%;
     left: 10%;
     width: 16%;
+    display: none;
 }
