@@ -5,51 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-
-        body {
-            margin: 0;
-        }
-
-        .display-flex {
-            display: flex;
-        }
-        .display-block {
-            display: block;
-        }
-        
-        .position-absolute {
-            position: absolute;
-        }
-
-        .position-relative {
-            position: relative;
-        }
-
-        .border-none {
-            border: none;
-        }
-
-        .width-100-percent {
-            width: 100%;
-        }
-
-        .groups-container {
-            width: 10%;
-        }
-        
-        #iframe {
-            width: 99vw;
-            height: 99vh;
-        }
-
-        #channels-buttons-container {
-            top: 0%;
-            left: 10%;
-        }
-
-
-    </style>
+    <link rel="stylesheet" href="./stylesheet.css">
+   
 </head>
 <body>
     <div class="position-relative">
@@ -59,7 +16,7 @@
           <button class="display-block width-100-percent">Dutch</button>
           <button class="display-block width-100-percent">Iraqi</button>
       </div>
-      <div id="channels-buttons-container" class="position-absolute">
+      <div id="channels-buttons-container" class="position-absolute width-100-percent">
 
       </div>
     </div>
@@ -72,15 +29,31 @@
 
         const channelsLinks = [
             // Arabic Group
+            // Alarabiya
+            "https://www.youtube.com/embed/UDNO9R7C4oQ",
+            // Alghad
+            "https://www.youtube.com/embed/CQJTh00eib0",
+            // Alhadath
+            "https://www.youtube.com/embed/St61kDYyrvk",
             // Asharq
             "https://www.youtube.com/embed/3-w4NKvDp9A",
             // BBC
-           "https://www.youtube.com/embed/HxI2TxhhS9A",
+            "https://www.youtube.com/embed/HxI2TxhhS9A",
+            // Orient
+            "https://www.youtube.com/embed/rqbChsd8IH4",
             // Sky News Arabic
-           "https://www.youtube.com/embed/IT2pWSWneTc"
+            "https://www.youtube.com/embed/IT2pWSWneTc"
         ];
 
-        const channelsNames = ['Asharq', 'BBC', 'Sky News Arabic'];
+        // Alsharqiya
+        // Dijlah
+        // Zagros Arabic
+        // UTV
+        // Alfalujah
+        // Huna Baghdad
+        // One news
+
+        const channelsNames = ['Alarabiya', 'Alghad', 'Alhadath', 'Asharq', 'BBC', 'Orient', 'Sky News Arabic'];
         const setSrc = (link) => {
             console.log('Changing the channel...');
             document.getElementById('iframe').setAttribute('src', link);
@@ -88,16 +61,15 @@
             let channelsCounter = 0;
             channelsLinks.forEach((channel) => {
                 console.log(channel);
-                  let button = document.createElement('BUTTON');
-                 let text = document.createTextNode(channelsNames[channelsCounter]);
-                 button.onclick = function () {
+                let button = document.createElement('BUTTON');
+                let text = document.createTextNode(channelsNames[channelsCounter]);
+                button.onclick = function () {
                     setSrc(channel);
-                 }
-                 button.setAttribute('class', 'display-block');
-            button.appendChild(text);
-             document.getElementById('channels-buttons-container').appendChild(button);
-             channelsCounter++;
-                
+                }
+                button.setAttribute('class', 'display-block');
+                button.appendChild(text);
+                document.getElementById('channels-buttons-container').appendChild(button);
+                channelsCounter++;
             });
   
     </script>
